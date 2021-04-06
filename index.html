@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anketa</title>
+    <link href="index.css" rel="stylesheet" />
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="title-main">
+        <h1>Anketa</h1>
+    </div>
+    <div class="formclass">
+        <form id="formId">
+            <div class="main-info">
+                <div class="col1">
+                    <label for="firstName">Vardas *</label><br>
+                    <input type="field" id="firstName"><br>
+                    <label for="middleName">Antrasis vardas</label><br>
+                    <input type="field" id="middleName"><br>
+                    <label for="firstName">Pavardė *</label><br>
+                    <input type="field" id="lastName"><br>
+                    <label for="mergautine">Ankstesnė pavardė</label><br>
+                    <input type="field" id="mergautine">
+                </div>
+                <div class="col1">
+                    <strong>Pasirinkite savo lytį</strong><br>
+                    <label for="male">Vyras</label>
+                    <input type="checkbox" id="male">
+                    <label for="female">Moteris</label>
+                    <input type="checkbox" id="female"><br>
+                </div>
+                <div class="col1">
+                    <strong><label>Gimimo data</label></strong><br>
+                    <input type="date" id="birthDate">
+                </div>
+                <div class="col1">
+                    <strong><label for="kodas">Asmens kodas</label></strong><br>
+                    <input type="field" id="kodas" name="asmensKodas">
+                </div>
+            </div>
+            <div class="degree">
+                <div class="col2">
+                <strong><label>Išsilavinimas</label></strong><br>
+                    <label >Pagrindinis</label>
+                    <input type="checkbox" id="pagr"onclick="ShowHidePreQual()">
+                    <label >Vidurinis</label>
+                    <input type="checkbox" id="vid" onclick="ShowHidePreQual()">
+                    <label >Profesinis</label>
+                    <input type="checkbox" id="prof" onclick="ShowHideProfQual()">
+                    <label >Aukštasis-kolegijinis</label>
+                    <input type="checkbox" id="aukskol" onclick="ShowHideCollDegree()">
+                    <label >Aukštasis-universitetinis</label>
+                    <input type="checkbox" id="aukstuni" onclick="ShowHideUniDegree()">
+                </div>
+                <div class="col2" id="col2-3">
+                    <strong><label>Paskutinė sėkmingai užbaigta mokslo / studijų įstaiga:</label></strong>
+                    <input type="field" id="lastSchool"><br>
+                    <strong><label>Baigimo metai:</label></strong>
+                    <input type="field" id="endYear"><br>
+                </div>
+                <div class="col2" id="col2-4">
+                    <strong><label>Paskutinė sėkmingai užbaigta mokslo / studijų įstaiga:</label></strong>
+                    <input type="field" id="lastSchool"><br>
+                    <strong><label>Baigimo metai:</label></strong>
+                    <input type="field" id="endYear"><br>
+                    <strong><label>Laipsnis</label></strong><br>
+                    <label >Profesinis</label>
+                    <input type="checkbox" id="profkval"onclick="ShowHideQual()"><br>
+                </div>
+                <div class="col2" id="col2-5">
+                    <strong><label>Paskutinė sėkmingai užbaigta mokslo / studijų įstaiga:</label></strong>
+                    <input type="field" id="lastSchool"><br>
+                    <strong><label>Baigimo metai:</label></strong>
+                    <input type="field" id="endYear"><br>
+                    <strong><label>Laipsnis</label></strong><Br>
+                    <label >Bakalauras</label>
+                    <input type="checkbox" id="bakal" onclick="ShowHideQual()">
+                    <label >Magistras</label>
+                    <input type="checkbox" id="magist"onclick="ShowHideQual()">
+                </div>
+                <div class="col2" id="col2-1">
+                    <strong><label>Paskutinė sėkmingai užbaigta mokslo / studijų įstaiga:</label></strong>
+                    <input type="field" id="lastSchool"><br>
+                    <strong><label>Baigimo metai:</label></strong>
+                    <input type="field" id="endYear"><br>
+                    <strong><label>Laipsnis</label></strong><br>
+                    <label >Bakalauras</label>
+                    <input type="checkbox" id="bakal" onclick="ShowHideQual()">
+                    <label >Magistras</label>
+                    <input type="checkbox" id="magist"onclick="ShowHideQual()">
+                    <label >Daktaras</label>
+                    <input type="checkbox" id="daktr"onclick="ShowHideQual()">
+                </div>
+                    <div class="col2" id="col2-2">
+                        <strong><label>Kvalifikacija</label></strong>
+                        <table>
+                            <tr>
+                                <td id="degreeCell">
+                                <input type="button" id="addDegree" value="Prideti kvalifikacija"/><br>
+                                <input type="text" id="degrees"/><br>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class = "contact">
+                <div class="col3">
+                    <strong>Kontaktiniai duomenys</strong><br>
+                    <label>Telefono numeris</label>
+                    <input type="field" id="phoneNumber"><br>
+                    <label>El. pašto adresas</label>
+                    <input type="field" id="email"><br>
+                </div>
+                <div class="col3">
+                    <strong><label>Kiti kontaktiniai duomenys</label></strong>
+                        <table>
+                            <tr>
+                                <td id="contactCell">
+                                <input type="button" id="addContact" value="Prideti kitus kontaktinius duomenus"/><br>
+                                <input type="text" id="contacts"/><br>
+                                </td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="col3">
+                    <strong>Gyvenamoji vieta</strong><br>
+                    <label>Šalis</label>
+                    <input type="field" id="country"><br>
+                    <label>Miestas</label>
+                    <input type="field" id="city"><br>
+                    <label>Adresas</label>
+                    <input type="field" id="adress">
+                </div>
+            </div>
+            <div class="family">
+                <div class="col4">
+                    <strong>Šeimyninė padėtis</strong><br>
+                    <label >Vedęs/ištekėjusi</label>
+                    <input type="checkbox" id="married" onclick="ShowHideMarried()">
+                    <label >Nevedęs/netekėjusi</label>
+                    <input type="checkbox" id="notmarried" onclick="ShowHideBrokeOrNotMarried()">
+                    <label >Išsiskyręs/išsiskyrusi</label>
+                    <input type="checkbox" id="broke" onclick="ShowHideBrokeOrNotMarried()">
+                </div>
+                <div class="col4" id="col4-1">
+                    <label>Partnerio vardas</label>
+                    <input type="field" id="pName"><br>
+                    <label>Partnerio pavardė</label>
+                    <input type="field" id="pSurname"><br>
+                    <label>Partnerio asmens kodas</label>
+                    <input type="field" id="pAk"><br>
+                </div>
+                <div class="col4" id="col4-2">
+                    <table>
+                        <tr>
+                            Vaikų kiekis:
+                            <span id="timesClicked" readonly>0</span><br>
+                            <td id="childCell">
+                            <input type="button" id="addChild" value="Prideti vaiką"/><br>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="work">
+                <div class="col5">
+                    <strong>Profesinė padėtis</strong><br>
+                    <label>Studijuoja<input type="checkbox" id="studying" onclick="ShowHideStudies()"></label>
+                    <label>Dirba<input type="checkbox" id="works" onclick="ShowHideWork()"></label>
+                    <label>Nedirba<input type="checkbox" id="unemployed" onclick="ShowHideUnemployment()"></label>
+                    <label>Motinystės/tėvystės atostogos<input type="checkbox" id="holiday"></label>
+                </div>
+                <div class="col5" id="col5-1">
+                    <strong>Studijų informacija</strong><br>
+                    <label>Studijų pakopa <input type="text" id="studyLadder"></label><br>
+                    <label>Studijų kursas <input type="text" id="studyYear"></label><br>
+                    <label>Studijų įstaiga <input type="text" id="studyPlace"></label>
+                </div>
+                <div class="col5" id="col5-2">
+                    <strong>Darbo įstaigos informacija</strong><br>
+                    <label>Darbo įstaiga <input type="text" id="workPlace"></label><br>
+                    <label>Pareigos <input type="text" id="workOffice"></label><br>
+                    <label>Darbo patirtis (metais) <input type="text" id="workYear"></label><br>
+                    <label>Darbo pobūdis <input type="text" id="workType"></label><br>
+                    <label>Darbo sritis <input type="text" id="workArea"></label>
+                </div>
+                <div class="col5" id="col5-3">
+                    <strong>Nedarbo informacija</strong><br>
+                    <label>Nedarbo priežastis <input type="text" id="unemployementReason"></label><br>
+                </div>
+            </div>
+            <div class="subBtn"><button type="button" class="submitBtn" onclick="saveObject()">Patvirtinti</button></div>
+            <br>
+        </form>
+    </div>
+</body>
+</html>
